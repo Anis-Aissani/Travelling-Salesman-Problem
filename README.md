@@ -12,6 +12,8 @@ L'objectif est d'étudier le compromis entre la **précision** (qualité de la s
 * **Analyse Statistique :** Comparaison sur 100 essais (moyennes, écarts-types, gains en %).
 * **Étude de Complexité :** Courbes d'évolution du temps et du coût en fonction du nombre de villes ($N$).
 
+![Menu Principal](./images/c5.png)
+
 ## 🧠 Les Algorithmes Implémentés
 
 ### 1. PPP (Plus Proche Voisin)
@@ -34,12 +36,33 @@ L'objectif est d'étudier le compromis entre la **précision** (qualité de la s
 - **Principe :** Explore l'arbre des solutions en utilisant une borne inférieure (Demi-Somme des 2 meilleures arêtes) pour élaguer les branches inutiles
 - **Performance :** Donne la solution **optimale**, mais le temps explose quand $N > 15$
 
+---
+
+## 📊 Résultats Visuels et Statistiques
+
+### 1. Démonstration Topologique
+Comparaison des cycles trouvés pour un graphe de 16 villes. On observe clairement l'efficacité de l'algorithme OptPPP pour "démêler" les croisements du PPP initial, s'approchant parfaitement de la solution exacte (HDS).
+
+![Comparaison des cycles](./images/c1.png)
+
+### 2. Étude Statistique (Robustesse)
+Sur 100 essais avec $N=10$, l'algorithme OptPPP améliore la solution gloutonne de ~7% et se positionne à moins de 1% de la solution optimale, tout en restant environ 200 fois plus rapide que la méthode exacte HDS.
+
+![Étude statistique](./images/c4.png)
+
+### 3. Explosion Combinatoire
+L'échelle logarithmique (graphique de droite) illustre visuellement la complexité exponentielle $\mathcal{O}(b^n)$ de l'algorithme exact HDS, tandis que les heuristiques maintiennent un temps d'exécution quasi-plat.
+
+![Évolution de la complexité](./images/c3.png)
+
+---
+
 ## 📦 Structure du Projet
 
 ```
 TSP-Solver-Suite/
 ├── README.md
-├── data/
+├── images/
 └── src/
     ├── main.py                 # Point d'entrée principal (Menu)
     ├── plot.py                 # Affichage matplotlib
@@ -65,10 +88,9 @@ TSP-Solver-Suite/
 - Python 3.x
 - Matplotlib (pour les graphiques)
 - Numpy (pour les calculs matriciels)
-- PyQt5 (pour le GUI)
 
 ```bash
-pip install matplotlib numpy PyQt5
+pip install matplotlib numpy
 ```
 
 ### Lancer le projet
@@ -101,4 +123,5 @@ Une fois lancé, le programme propose 3 modes :
 ## 📝 Auteur
 
 Anis AISSANI
+
 

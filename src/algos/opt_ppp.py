@@ -56,7 +56,7 @@ def opt_ppp(cycle_init, G):
                 if dist_nouvelle < dist_actuelle:
                     # Il y a une amélioration, on effectue le remplacement
                     # Pour cela, on inverse la section du cycle entre B et C
-                    cycle[i + 1:j + 1] = reversed(cycle[i + 1:j + 1])
+                    cycle[i + 1:j + 1] = reversed(cycle[i + 1:j + 1]) #le plus important 
                     amelioration = True
 
     return cycle
