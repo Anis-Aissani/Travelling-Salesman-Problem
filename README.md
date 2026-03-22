@@ -12,7 +12,6 @@ L'objectif est d'étudier le compromis entre la **précision** (qualité de la s
 * **Analyse Statistique :** Comparaison sur 100 essais (moyennes, écarts-types, gains en %).
 * **Étude de Complexité :** Courbes d'évolution du temps et du coût en fonction du nombre de villes ($N$).
 
-![Menu Principal](./images/c5.png)
 
 ## 🧠 Les Algorithmes Implémentés
 
@@ -104,6 +103,9 @@ python main.py
 ## 📊 Utilisation
 
 Une fois lancé, le programme propose 3 modes :
+
+![Menu Principal](./images/c5.png)
+
 
 ### 1. Démonstration Visuelle
 - Lance les 4 algorithmes sur un seul graphe (aléatoire ou fichier)
